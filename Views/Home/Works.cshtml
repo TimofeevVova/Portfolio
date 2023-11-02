@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Pages/Works.css" />
+}
+
+<!--Модальное окно-->
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Заголовок формы</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">                
+            </div>            
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <p>На данной странице реализованы мои проекты, просто кликни на кнопку</p>
+  
+    <div class="row">    
+        
+        <!--Секундомер-->
+        <div class="col-md-3 ">
+            <div class="container worksBlock">
+                <div class="row description">
+                    <p>Простой секундомер на JavaScript</p>
+                </div>
+                <div class="row">                    
+                    <button id="OpenStopWatch" class="btn btn-primary btnForm">Открыть секундомер</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 ">
+            <div class="container worksBlock">
+                <div class="row description">    
+                    <p>Курсы валют которые подтягиваются через API</p>
+                </div>
+                <div class="row">
+                    <button id="OpenExchangeRates" class="btn btn-primary btnForm">Открыть курсы валют</button>
+                </div>
+            </div>
+        </div>     
+
+        <div class="col-md-3 ">
+            <div class="container worksBlock">
+                <div class="row description">
+                    <p>Игра: Угадай число!</p>
+                    <p>Правила: нужно угадать 4 значное число, где цифры неповторяются. 
+                        После каждой попытки в таблице будет указано: 
+                        Скорлько правильных цифр угадано 
+                        и сколько из них расположены на своем месте.</p>
+                </div>
+                <div class="row">
+                    <button id="OpenFindNumber" class="btn btn-primary btnForm">Открыть игру</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 ">
+            <div class="container worksBlock">
+                <div class="row description">
+                    <p>Работа с Базой данных (в разработке)</p>
+                </div>
+                <div class="row">
+                    <button id="" class="btn btn-primary btnForm" disabled>Открыть проект</button>
+                </div>
+            </div>
+        </div>
+    </div>       
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/js/Pages/works.js")"></script>
+    <script src="@Url.Content("~/js/Pages/ExchangeRates.js")"></script>
+
+}

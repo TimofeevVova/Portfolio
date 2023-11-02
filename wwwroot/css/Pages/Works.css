@@ -1,0 +1,39 @@
+﻿
+button{
+    width:150px;
+}
+
+.btnForm{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.worksBlock {
+    border: 2px solid #333333;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1); /* Тень: горизонтальное смещение, вертикальное смещение, размытие, цвет */
+}
+
+.worksBlock:hover {
+    box-shadow: 0 40px 80px rgba(0, 0, 0.1); /* Тень: горизонтальное смещение, вертикальное смещение, размытие, цвет */    
+}
+
+.description {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 250px;
+}
+
+.choice {
+    height: 27px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+    

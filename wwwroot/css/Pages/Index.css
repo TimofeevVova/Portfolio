@@ -1,0 +1,13 @@
+﻿.block1 {
+    margin-top: 200px;
+    background-color: red;    
+}
+
+.mainText {
+    font-size: 24px;
+}
+
+.mainPhoto {
+    width: 300px;
+    height: 300px;
+}
