@@ -42,6 +42,7 @@ $('#OpenExchangeRates').click(function () {
         }
     });
 });
+
 // Переменные
 userNumber = "";
 var length = 0;
