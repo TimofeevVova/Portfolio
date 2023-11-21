@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Pages/DataBasePage.css" />
+}
+
+<!--Модальное окно-->
+@Html.Partial("ModalWindow")
+
+<div class="container">
+    <a class="btn btn-link" asp-area="" asp-controller="Home" asp-action="Works">Назад</a>
+    <div class="d-flex justify-content-center">
+        <div class="text-center">
+            <p class="d-none">Данная кнопка пока что переводит вас на страницу с данными без регистрации. Регистрация в стадии разработки</p>
+            <p>На стадии разработки: Пагинация, генерация большого количества данных</p>
+            <button id="openRegisterMainUser" class="btn btn-primary">Зарегистрироваться</button>
+            <div id="mainDBData">
+        </div>
+    </div>     
+</div>
+
+@section Scripts {   
+    <script src="@Url.Content("~/js/Pages/DataBasePage.js")"></script>
+}

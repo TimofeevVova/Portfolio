@@ -17,5 +17,40 @@ namespace Portfolio.Controllers
             return PartialView();
         }
 
+        //основная часть работы с БД
+        public IActionResult MainDBProgram()
+        {
+            return PartialView();
+        }
+        /*
+        // Основная регистрация
+        public IActionResult RegisterMainUser()
+        {
+            return PartialView();
+        }
+        */
+
+        // добавить демо пользователя
+        public IActionResult AddDemoUser()
+        {
+            return PartialView();
+        }
+
+        // открыть модально окно с выбором id демо пользователя
+        public IActionResult ModalFormChangeDemoUser()
+        {
+            return PartialView();
+        }
+        // редактирование демо пользователя
+        public IActionResult ChangeDemoUser()
+        {
+            return PartialView();
+        }
+
+        // удалить демо пользователя
+        public IActionResult DeleteDemouser()
+        {
+            return PartialView();
+        }
     }
 }

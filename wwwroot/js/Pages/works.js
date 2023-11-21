@@ -4,7 +4,7 @@ let startTime;
 let isRunning = false;
 let accumulatedTime = 0;
 // открыть таймер
-$('#OpenStopWatch').click(function () {
+$('#openStopWatch').click(function () {
 
     var url = '../Progects/StopWatch';
     $.ajax({
@@ -23,7 +23,7 @@ $('#OpenStopWatch').click(function () {
 });
 
 // открыть курс валют
-$('#OpenExchangeRates').click(function () {
+$('#openExchangeRates').click(function () {
 
     var url = 'https://www.cbr-xml-daily.ru/daily.xml';
     $.ajax({
@@ -48,7 +48,7 @@ userNumber = "";
 var length = 0;
 var attemptNumber = 0;
 // открыть игру Угадай число
-$('#OpenFindNumber').click(function () {
+$('#openFindNumber').click(function () {
 
     var url = '../Progects/FindTheNumber';
     $.ajax({
@@ -62,6 +62,26 @@ $('#OpenFindNumber').click(function () {
 
             // Показать кнопку
             document.getElementById("startGameButton").classList.remove("d-none");
+        },
+        error: function () {
+            console.log('Ошибка при загрузке');
+        }
+    });
+});
+
+// открыть программу с БД
+$('#openDataBaseProgram').click(function () {
+    console.log('клик');
+    var url = '../Progects/DataBasePage';
+    console.log(url);
+    $.ajax({
+        url: url,
+        type: 'GET',
+        success: function (data) {
+            $('#modalForm .modal-title').text('Может быть тут что то будет написано');
+            $('#modalForm .modal-body').html(data);
+            $('#modalForm').modal('show');     
+            console.log('готово');
         },
         error: function () {
             console.log('Ошибка при загрузке');

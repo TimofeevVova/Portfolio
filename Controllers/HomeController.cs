@@ -24,7 +24,16 @@ namespace Portfolio.Controllers
         public IActionResult Contacts()
         {
             return View();
+        }        
+        public IActionResult DataBase()
+        {
+            return View();
         }
+        public IActionResult ModalWindow()
+        {
+            return PartialView();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

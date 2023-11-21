@@ -1,0 +1,11 @@
+﻿.modal-dialog {
+    max-width: 800px;
+}
+
+.longBtn {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: #7f7f7f;
+    margin-bottom: 20px;
+}
