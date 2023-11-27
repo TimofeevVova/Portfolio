@@ -1,32 +1,4 @@
-﻿// открыть страницу регистрации
-/*
-$('#openRegisterMainUser').click(function () {
-
-    var url = '../Progects/RegisterMainUser';
-
-    $.ajax({
-        url: url,
-        type: 'GET',
-        success: function (data) {
-            $('#modalForm .modal-title').text('Может быть тут что то будет написано');
-            $('#modalForm .modal-body').html(data);
-            $('#modalForm').modal('show');
-
-            // загрузка данных
-            LoadDataBase();
-
-            // временно сразу закрывает страницу регистрации
-            setTimeout(function () {
-                $('#registerMainUser').click();
-            }, 500);
-        },
-        error: function () {
-            console.log('Ошибка при загрузке');
-        }
-    });
-});
-*/
-
+﻿
 // Действия при загрузке страницы
 $(document).ready(function () {
 
@@ -36,10 +8,7 @@ $(document).ready(function () {
         type: 'GET',
         success: function (data) {
             // показать данные на странице
-            $('#mainDBData').html(data);
-
-            // скрыть кнопку регистрации
-            $('#openRegisterMainUser').hide();
+            $('#mainDBData').html(data);            
 
             // показать данные с сервера
             LoadDataBase();
