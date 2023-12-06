@@ -6,7 +6,7 @@ let accumulatedTime = 0;
 // открыть таймер
 $('#openStopWatch').click(function () {
 
-    var url = '../Progects/StopWatch';
+    var url = '../Projects/StopWatch';
     $.ajax({
         url: url,
         type: 'GET',
@@ -50,7 +50,7 @@ var attemptNumber = 0;
 // открыть игру Угадай число
 $('#openFindNumber').click(function () {
 
-    var url = '../Progects/FindTheNumber';
+    var url = '../Projects/FindTheNumber';
     $.ajax({
         url: url,
         type: 'GET',
@@ -72,7 +72,7 @@ $('#openFindNumber').click(function () {
 // открыть программу с БД
 $('#openDataBaseProgram').click(function () {
     console.log('клик');
-    var url = '../Progects/DataBasePage';
+    var url = '../DataBase/DataBasePage';
     console.log(url);
     $.ajax({
         url: url,

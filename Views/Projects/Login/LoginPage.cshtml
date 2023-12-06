@@ -1,0 +1,34 @@
+﻿<div class="container border p-3" style="max-width: 400px;">
+    <div class="row">
+        <h3>Авторизация</h3>
+
+        <div class="mb-3">
+            <label id="errorLoginLabel"></label>
+            <br />
+            <label class="form-label">Логин</label>
+            <input type="text" class="form-control" id="login">
+        </div>
+
+        <div>
+            <label class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+
+        <div>
+            <input type="checkbox" id="savePassword" name="fav_language" value="HTML">
+            <label class="form-label">Сохранить пароль</label>            
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Не зарегистрированы - </label>
+            <a id="" class="" asp-area="" asp-controller="Login" asp-action="RegisterPage">Регистрация</a>
+        </div>
+
+        <button id="LoginUser" class="btn btn-primary">Войти</button>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="@Url.Content("~/js/Pages/LoginProgram/LoginPage.js")"></script>
+}
