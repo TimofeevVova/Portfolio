@@ -21,6 +21,40 @@ namespace Portfolio.Controllers
             public int System_Id { get; set; }
         }
 
+        //основная часть работы с БД
+        [HttpGet("mainDBProgram")]
+        public IActionResult MainDBProgram()
+        {
+            return PartialView("~/Views/Projects/DataBaseProgram/MainDBProgram.cshtml");
+        }
+
+        // добавить демо пользователя
+        [HttpGet("addDemoUser")]
+        public IActionResult AddDemoUser()
+        {
+            return PartialView("~/Views/Projects/DataBaseProgram/AddDemoUser.cshtml");
+        }
+
+        // открыть модально окно с выбором id демо пользователя
+        [HttpGet("modalFormChangeDemoUser")]
+        public IActionResult ModalFormChangeDemoUser()
+        {
+            return PartialView("~/Views/Projects/DataBaseProgram/ModalFormChangeDemoUser.cshtml");
+        }
+        // редактирование демо пользователя
+        [HttpGet("changeDemoUser")]
+        public IActionResult ChangeDemoUser()
+        {
+            return PartialView("~/Views/Projects/DataBaseProgram/ChangeDemoUser.cshtml");
+        }
+
+        // удалить демо пользователя
+        [HttpGet("deleteDemouser")]
+        public IActionResult DeleteDemouser()
+        {
+            return PartialView("~/Views/Projects/DataBaseProgram/DeleteDemouser.cshtml");
+        }
+
         // Получение всех данных
         [HttpGet("getallusers")]
         public IActionResult GetAllUsers()
@@ -35,9 +69,7 @@ namespace Portfolio.Controllers
         [HttpGet("getuserbyid")]
         public IActionResult GetDemoUserById([FromQuery] Data model)
         {
-
             Console.WriteLine("Метод GetDemoUserById вызван с параметром System_Id: " + model.System_Id);
-
 
             var user = _dbHelper.GetDemoUserById(model.System_Id);
 

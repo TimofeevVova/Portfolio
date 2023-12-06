@@ -10,6 +10,8 @@ namespace Portfolio
         {
             // Регистрация DbHelper
             services.AddScoped<DbHelper>();
+            // Регистрация LoginHelper
+            services.AddScoped<LoginHelper>();
 
             // Подключение к PostgreSQL
             services.AddDbContext<DbSettings>(options =>

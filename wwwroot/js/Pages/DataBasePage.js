@@ -2,7 +2,9 @@
 // Действия при загрузке страницы
 $(document).ready(function () {
 
-    var url = '../Progects/MainDBProgram';
+    //var url = '../Projects/MainDBProgram';
+    var url = '/api/DataBase/mainDBProgram';
+
     $.ajax({
         url: url,
         type: 'GET',
@@ -22,7 +24,8 @@ $(document).ready(function () {
 // Открыть модвльное окно добавлкения демо юзера
 $(document).on('click', '#openAddNewDemoUserForm', function () {
 
-    var url = '../Progects/AddDemoUser';
+    //var url = '../Projects/AddDemoUser';
+    var url = '/api/DataBase/addDemoUser';
 
     $.ajax({
         url: url,
@@ -73,7 +76,8 @@ $(document).on('click', '#addDemoUser', function () {
 // Открыть модальное окно удаления пользователя
 $(document).on('click', '#deleteUser', function () {
 
-    var url = '../Progects/DeleteDemoUser';
+    //var url = '../Projects/DeleteDemoUser';
+    var url = '/api/DataBase/deleteDemoUser';
 
     $.ajax({
         url: url,
@@ -161,6 +165,9 @@ $(document).on('click', '.deleteDemoUser', function (e) {
 // загрузка данных с сервера в таблицу
 function LoadDataBase() {
 
+    // анимация загрузки
+    ShowLoadingAnimation();
+
     var url = '/api/DataBase/getallusers';
 
     $.ajax({
@@ -174,9 +181,26 @@ function LoadDataBase() {
         },
         error: function (error) {
             console.log(error);
+        },
+        complete: function () {
+            // код выполнится после завершения запроса (включая успешный или неуспешный)
+            HideLoadingAnimation();
         }
     });
 }
+
+// показать анимацию загрузки
+function ShowLoadingAnimation() {
+    $('#loadingSpinner').show();    
+    $('#mainTableDataBase').hide();
+}
+
+// скрыть анимацию загрузки
+function HideLoadingAnimation() {
+    $('#loadingSpinner').hide();
+    $('#mainTableDataBase').show();
+}
+
 
 // Построение таблицы с данными
 function DataConstruction(data) {
@@ -204,7 +228,8 @@ function DataConstruction(data) {
 // открыть модальное окно выбора демо пользователя для редактирования (просто открывает форму)
 $(document).on('click', '#openChangeDemoUser', function () {
 
-    var url = '../Progects/ModalFormChangeDemoUser';
+    //var url = '../Projects/ModalFormChangeDemoUser';
+    var url = '/api/DataBase/modalFormChangeDemoUser';
 
     $.ajax({
         url: url,
@@ -275,7 +300,9 @@ $(document).on('click', '.editDemoUser', function (e) {
 });
 
 function OpenModalChangeUserById(System_Id) { // открывает форму изменения данных по id
-    var url = '../Progects/ChangeDemoUser';
+    //var url = '../Projects/ChangeDemoUser';
+    var url = '/api/DataBase/changeDemoUser';
+
     $.ajax({
         url: url,
         type: 'GET',
@@ -284,9 +311,7 @@ function OpenModalChangeUserById(System_Id) { // открывает форму �
             $('#modalForm .modal-body').html(data);
             $('#modalForm').modal('show');
 
-
             ShowDataDemoUser(System_Id);
-
         },
         error: function (error) {
             console.log(error);            

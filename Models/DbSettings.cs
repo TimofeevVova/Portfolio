@@ -8,12 +8,13 @@ namespace Portfolio.Models
         {
         }
 
-        public DbSet<InfoDataBase> InfoDataBases { get; set; }
+        public DbSet<InfoDataBase> InfoDataBases { get; set; } // таблица db в базе данных [Table("db")]
+        public DbSet<ClientDataBase> ClientDataBase { get; set; } // таблица loginData в базе данных [Table("loginData")]
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Дополнительные настройки модели могут быть добавлены здесь
-            // Например, указание первичных и внешних ключей и т.д.
+            // Игнорируем таблицу "db"
+            //modelBuilder.Ignore<InfoDataBase>();
         }
     }
 }
